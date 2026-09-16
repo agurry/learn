@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>You Can Build an Android App With AI | Learn Andrew Gurry</title>
+  <meta name="description" content="How I Built My Own Android App With ChatGPT (And How You Can Too) Have you ever wished you had your own custom app on your phone? Not something from the Play…">
+  <link rel="canonical" href="https://learn.andrewgurry.com/articles/you-can-build-an-android-app-with-ai/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:title" content="You Can Build an Android App With AI | Learn Andrew Gurry">
+  <meta property="og:description" content="How I Built My Own Android App With ChatGPT (And How You Can Too) Have you ever wished you had your own custom app on your phone? Not something from the Play…">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://learn.andrewgurry.com/articles/you-can-build-an-android-app-with-ai/">
+  <meta property="og:image" content="https://learn.andrewgurry.com/images/articles/you-can-build-an-android-app-with-ai.webp">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <nav aria-label="Primary navigation">
+      <a class="brand" href="/">Learn <span>Andrew Gurry</span></a>
+      <div class="nav-links"><a href="/articles/">Articles</a><a href="https://andrewgurry.com/">AndrewGurry.com</a></div>
+    </nav>
+  </header>
+  <main id="content" class="article"><div class="breadcrumbs"><a href="/">Learn</a> / <a href="/articles/">Articles</a> / Technology</div><article><h1>You Can Build an Android App With AI</h1><div class="article-meta">By Andrew Gurry · December 28, 2025 · Technology</div><img class="featured" src="/images/articles/you-can-build-an-android-app-with-ai.webp" alt="" width="1200" height="675"><aside class="archive-note" aria-label="Article archive notice"><strong>From the A-A Events archive.</strong> Originally published December 28, 2025 and migrated to Learn Andrew Gurry. Software, security practices, product features, and mining economics may have changed since publication. Verify current official documentation before following technical steps.</aside><div class="article-body"><h2>How I Built My Own Android App With ChatGPT (And How You Can Too)</h2>
+
+
+
+
+<p>Have you ever wished you had your <strong>own custom app</strong> on your phone?</p>
+
+
+
+
+<p>Not something from the Play Store…<br>Your <em>own</em> app. Your icon. Your features. Your rules.</p>
+
+
+
+
+<p>That’s what I wanted.</p>
+
+
+
+
+<p>I wanted an app that could:</p>
+
+
+
+
+<ul>
+<li>Track my tasks</li>
+
+
+
+<li>Store my notes and diary</li>
+
+
+
+<li>Keep lists (like shopping and maintenance)</li>
+
+
+
+<li>Remind me of things with notifications</li>
+
+
+
+<li>Use <strong>voice input</strong> so I could talk instead of type</li>
+</ul>
+
+
+
+
+<p>So I teamed up with <strong>ChatGPT</strong> and <strong>Android Studio</strong> and built it.</p>
+
+
+
+
+<p>In this post, I’ll walk you through <strong>how I did it</strong>, what tools I used, and how you can follow a similar path—even if you’re not a pro developer.</p>
+
+
+
+
+<p>I’ll also share a great book that helped me understand Android and Kotlin better:<br>👉 <a href="https://amzn.to/3YfK00y" rel="sponsored nofollow">How to Build Android Applications with Kotlin</a> <em>(affiliate link – I may earn a small commission if you buy through this link, at no extra cost to you.)</em></p>
+
+
+
+
+<hr>
+
+
+
+
+<h2>Why Build Your Own App?</h2>
+
+
+
+
+<p>Here’s my problem:</p>
+
+
+
+
+<p>I had notes and tasks <strong>everywhere</strong>:</p>
+
+
+
+
+<ul>
+<li>On my phone</li>
+
+
+
+<li>In OneNote</li>
+
+
+
+<li>On sticky notes</li>
+
+
+
+<li>In ChatGPT chats</li>
+
+
+
+<li>On my Kindle Scribe</li>
+
+
+
+<li>In random text files</li>
+</ul>
+
+
+
+
+<p>It was chaos.</p>
+
+
+
+
+<p>I wanted <strong>one place</strong> to hold:</p>
+
+
+
+
+<ul>
+<li>Work tasks</li>
+
+
+
+<li>Personal life stuff</li>
+
+
+
+<li>Business ideas</li>
+
+
+
+<li>Family reminders</li>
+
+
+
+<li>Study notes</li>
+
+
+
+<li>Legal notes</li>
+
+
+
+<li>Health tracking</li>
+</ul>
+
+
+
+
+<p>I tried existing apps, but none of them fit <em>exactly</em> what I wanted.</p>
+
+
+
+
+<p>So I thought:</p>
+
+
+
+
+<blockquote>
+<p>“Why not build my own Rememberall app?”</p>
+</blockquote>
+
+
+
+
+<p>(Yes, like the crystal ball that remembers everything 🔮)</p>
+
+
+
+
+<hr>
+
+
+
+
+<h2>Tools I Used</h2>
+
+
+
+
+<p>Here’s what I used to build my app:</p>
+
+
+
+
+<ul>
+<li><strong>Android Studio</strong> – the main IDE (development environment) for Android</li>
+
+
+
+<li><strong>Kotlin</strong> – the programming language</li>
+
+
+
+<li><strong>Room</strong> – to save data (tasks, notes, lists) in a local database</li>
+
+
+
+<li><strong>ChatGPT</strong> – to help me write code, fix errors, and design screens</li>
+
+
+
+<li><strong>My own brain</strong> – to decide what I actually wanted the app to do 😄</li>
+</ul>
+
+
+
+
+<p>And to go deeper into Android and Kotlin, I recommend this book:</p>
+
+
+
+
+<p>👉 <a href="https://amzn.to/3YfK00y" rel="sponsored nofollow">How to Build Android Applications with Kotlin</a><br>It’s a hands-on guide to building Android apps with Kotlin, testing them, and getting them ready for release. It pairs really nicely with using ChatGPT as your “coding buddy.”</p>
+
+
+
+
+<hr>
+
+
+
+
+<h2>Step 1: Setting Up Android Studio</h2>
+
+
+
+
+<p>First, I downloaded the latest version of <strong>Android Studio</strong> from Google.</p>
+
+
+
+
+<p>Once it was installed, I:</p>
+
+
+
+
+<ol>
+<li>Clicked <strong>“New Project”</strong></li>
+
+
+
+<li>Chose <strong>“Empty Activity”</strong></li>
+
+
+
+<li>Gave it a name – I used <strong>Rememberall</strong></li>
+
+
+
+<li>Made sure <strong>Kotlin</strong> was the language</li>
+
+
+
+<li>Clicked <strong>Finish</strong></li>
+</ol>
+
+
+
+
+<p>Boom. Android Studio created a starter app with a single screen and a boring default Android icon.</p>
+
+
+
+
+<p>From there, ChatGPT and I started turning it into something useful.</p>
+
+
+
+
+<hr>
+
+
+
+
+<h2>Step 2: Designing the Core Features</h2>
+
+
+
+
+<p>I knew I didn’t want just another simple to-do app. I wanted something that felt like a <strong>personal command center</strong>.</p>
+
+
+
+
+<p>So we planned out these main parts:</p>
+
+
+
+
+<ul>
+<li><strong>Tasks tab</strong>
+<ul>
+<li>Create tasks with titles, categories, and due dates</li>
+
+
+
+<li>Set <strong>recurring tasks</strong> (like changing air filters or car maintenance)</li>
+
+
+
+<li>Mark tasks complete</li>
+
+
+
+<li>Get <strong>notifications</strong> before things are due</li>
+
+
+
+<li>Use <strong>voice input</strong> to add tasks by speaking</li>
+</ul>
+</li>
+
+
+
+<li><strong>Notes / Diary tab</strong>
+<ul>
+<li>Write notes, ideas, and diary entries</li>
+
+
+
+<li>Edit or delete them</li>
+
+
+
+<li>(Later: add voice input for recording meetings or thoughts)</li>
+</ul>
+</li>
+
+
+
+<li><strong>Lists tab</strong>
+<ul>
+<li>Create lists (shopping, packing, maintenance, etc.)</li>
+
+
+
+<li>Add items line by line</li>
+
+
+
+<li>(Next step: checkboxes for each item so you can mark them done while shopping)</li>
+</ul>
+</li>
+
+
+
+<li><strong>Help / Info tab</strong>
+<ul>
+<li>Explain how to use the app</li>
+
+
+
+<li>Show tips like “tap to edit, long-press to complete/share”</li>
+
+
+
+<li>Include a button that opens my website</li>
+
+
+
+<li>Manage categories</li>
+
+
+
+<li>Toggle <strong>light/dark theme</strong></li>
+
+
+
+<li>Export and import <strong>backup data</strong></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<p>We built this using <strong>tabs at the bottom</strong> (a BottomNavigationView) so I can switch between Tasks, Notes, Lists, and Help.</p>
+
+
+
+
+<hr>
+
+
+
+
+<h2>Step 3: Saving Data With Room</h2>
+
+
+
+
+<p>I didn’t want my tasks to disappear when I closed the app.</p>
+
+
+
+
+<p>So we used <strong>Room</strong>, which is part of Android Jetpack. Room lets you:</p>
+
+
+
+
+<ul>
+<li>Define data classes like <code>Task</code>, <code>Note</code>, and <code>ListEntry</code></li>
+
+
+
+<li>Save them to a local database on the phone</li>
+
+
+
+<li>Query them back when the app opens</li>
+</ul>
+
+
+
+
+<p>For example, a <code>Task</code> has:</p>
+
+
+
+
+<ul>
+<li><code>title</code></li>
+
+
+
+<li><code>category</code></li>
+
+
+
+<li><code>dueDate</code></li>
+
+
+
+<li><code>isRecurring</code></li>
+
+
+
+<li><code>repeatDays</code></li>
+</ul>
+
+
+
+
+<p>ChatGPT helped me write:</p>
+
+
+
+
+<ul>
+<li>The <strong>entities</strong> (data classes)</li>
+
+
+
+<li>The <strong>DAOs</strong> (data access objects)</li>
+
+
+
+<li>The <strong>database class</strong></li>
+</ul>
+
+
+
+
+<p>I already know some Java, so Kotlin felt pretty comfortable. But the details of Room and architecture can be confusing. That’s where using a book plus ChatGPT is powerful.</p>
+
+
+
+
+<p>If you want a structured guide, check out:<br>👉 <a href="https://amzn.to/3YfK00y" rel="sponsored nofollow">How to Build Android Applications with Kotlin</a></p>
+
+
+
+
+<p>It goes step-by-step through building real apps so you understand what’s happening under the hood.</p>
+
+
+
+
+<hr>
+
+
+
+
+<h2>Step 4: Making the UI Actually Nice to Use</h2>
+
+
+
+
+<p>The first version of the app was ugly but working.</p>
+
+
+
+
+<p>Then we improved the UI:</p>
+
+
+
+
+<ul>
+<li>Used <strong>RecyclerView</strong> to show lists of tasks, notes, and lists</li>
+
+
+
+<li>Fixed layout issues where items were hidden under my phone’s status bar</li>
+
+
+
+<li>Added <strong>FloatingActionButtons</strong> for adding tasks, notes, and lists</li>
+
+
+
+<li>Added a <strong>search bar</strong> and <strong>category filter</strong> for tasks</li>
+
+
+
+<li>Let the user add their own <strong>custom categories</strong> (like “Army”, “Business”, “Kids”, etc.), which are saved and stay forever</li>
+</ul>
+
+
+
+
+<p>ChatGPT helped a lot with the XML layouts:</p>
+
+
+
+
+<ul>
+<li>Lining up views</li>
+
+
+
+<li>Adding padding</li>
+
+
+
+<li>Using ConstraintLayout correctly</li>
+
+
+
+<li>Keeping the floating buttons above the bottom nav bar</li>
+</ul>
+
+
+
+
+<p>It felt like pair-programming with someone who never gets tired of answering layout questions.</p>
+
+
+
+
+<hr>
+
+
+
+
+<h2>Step 5: Adding Voice Input and Notifications</h2>
+
+
+
+
+<p>This is where it started to feel like magic.</p>
+
+
+
+
+<h3>Voice input for tasks</h3>
+
+
+
+
+<p>I added a little <strong>mic button</strong> on the Tasks tab that:</p>
+
+
+
+
+<ul>
+<li>Launches Android’s built-in <strong>speech-to-text</strong></li>
+
+
+
+<li>Lets me say something like: “Change air filter in 30 days”</li>
+
+
+
+<li>Fills in the new task dialog with the spoken text as the title</li>
+</ul>
+
+
+
+
+<p>No extra libraries needed—just the <code>RecognizerIntent</code> API and a bit of Kotlin.</p>
+
+
+
+
+<h3>Notifications</h3>
+
+
+
+
+<p>For notifications, we:</p>
+
+
+
+
+<ul>
+<li>Created a <strong>NotificationChannel</strong> (required on newer Android versions)</li>
+
+
+
+<li>Used <strong>AlarmManager</strong> to schedule reminders at 9:00am on the due date (or as soon as possible if the due date is in the past)</li>
+
+
+
+<li>Built a <strong>BroadcastReceiver</strong> that fires and shows the actual notification</li>
+</ul>
+
+
+
+
+<p>Now, when I set a task with a due date, the app schedules a reminder. If it’s a recurring task, long-pressing it lets me:</p>
+
+
+
+
+<ul>
+<li>Mark it complete and <strong>auto-schedule the next one</strong>, or</li>
+
+
+
+<li>Delete it</li>
+</ul>
+
+
+
+
+<hr>
+
+
+
+
+<h2>Step 6: Extras – Lists, Backup, Sharing, Theme, and Help</h2>
+
+
+
+
+<p>Once the basics were done, we added quality-of-life features:</p>
+
+
+
+
+<ul>
+<li><strong>Lists tab</strong>
+<ul>
+<li>For shopping lists, maintenance lists, project steps, etc.</li>
+
+
+
+<li>Each list has a title, category, and items typed line by line.</li>
+
+
+
+<li>You can edit or delete lists, and (coming next) tap items to check them off and grey them out.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Sharing via text/email</strong>
+<ul>
+<li>Long-press a task, note, or list and choose <strong>Share</strong>.</li>
+
+
+
+<li>It opens the standard Android share sheet, so you can send it via email, text, etc.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Backup / restore</strong>
+<ul>
+<li>Export all tasks, notes, lists, and categories to a JSON string.</li>
+
+
+
+<li>Share that string (email it to yourself, save it in a file).</li>
+
+
+
+<li>Later, paste it into “Import backup” to restore everything.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Theme toggle</strong>
+<ul>
+<li>Button to switch between <strong>light</strong> and <strong>dark</strong> theme.</li>
+
+
+
+<li>The choice is saved, so the app remembers your setting.</li>
+</ul>
+</li>
+
+
+
+<li><strong>Help / Info tab</strong>
+<ul>
+<li>Shows instructions like:
+<ul>
+<li>Tap to edit</li>
+
+
+
+<li>Long-press to complete, delete, or share</li>
+</ul>
+</li>
+
+
+
+<li>Button to open my website: <code>learn.andrewgurry.com</code></li>
+
+
+
+<li>Button to manage categories</li>
+
+
+
+<li>Buttons to export and import backups</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<p>It’s not just “a to-do list” anymore. It’s a real personal tool.</p>
+
+
+
+
+<hr>
+
+
+
+
+<h2>Where ChatGPT Fits In</h2>
+
+
+
+
+<p>Could I have written all of this by myself? Maybe.<br>Would it have taken <strong>way</strong> longer and been more frustrating? Yes.</p>
+
+
+
+
+<p>Here’s how ChatGPT helped:</p>
+
+
+
+
+<ul>
+<li>Answered “why is this crashing?” questions by looking at stack traces</li>
+
+
+
+<li>Converted my rough ideas into working Kotlin code</li>
+
+
+
+<li>Fixed layout issues in XML</li>
+
+
+
+<li>Helped design the app’s structure (tabs, fragments vs single activity, etc.)</li>
+
+
+
+<li>Gave me ready-made code for adapters, dialogs, long-press menus, and more</li>
+</ul>
+
+
+
+
+<p>And when I wanted to level up my understanding instead of just copy-pasting, I combined it with a good book:</p>
+
+
+
+
+<p>👉 <a href="https://amzn.to/3YfK00y" rel="sponsored nofollow">How to Build Android Applications with Kotlin</a></p>
+
+
+
+
+<p>The book gives deep explanations and patterns.<br>ChatGPT helps apply them to <em>my</em> specific app idea.</p>
+
+
+
+
+<p>Perfect combo.</p>
+
+
+
+
+<hr>
+
+
+
+
+<h2>You Can Do This Too</h2>
+
+
+
+
+<p>You don’t need to be a “real programmer” to build your own app anymore.</p>
+
+
+
+
+<p>Here’s a simple path you can follow:</p>
+
+
+
+
+<ol>
+<li><strong>Pick a real problem in your life</strong>
+<ul>
+<li>Too many notes everywhere?</li>
+
+
+
+<li>Need a custom workout log?</li>
+
+
+
+<li>Need a habit tracker made for your life?</li>
+</ul>
+</li>
+
+
+
+<li><strong>Install Android Studio</strong> and create a new Kotlin app.</li>
+
+
+
+<li><strong>Ask ChatGPT for help in small steps</strong>
+<ul>
+<li>“Show me how to add a button.”</li>
+
+
+
+<li>“How do I save data with Room?”</li>
+
+
+
+<li>“How do I make a list with RecyclerView?”</li>
+</ul>
+</li>
+
+
+
+<li><strong>Use a solid book as a backbone</strong>
+<ul>
+<li>Like this one: <a href="https://amzn.to/3YfK00y" rel="sponsored nofollow">How to Build Android Applications with Kotlin</a></li>
+
+
+
+<li>Learn the core pieces while ChatGPT helps you tie them together.</li>
+</ul>
+</li>
+
+
+
+<li>Keep iterating:
+<ul>
+<li>Add a feature</li>
+
+
+
+<li>Test it on your phone</li>
+
+
+
+<li>Fix bugs</li>
+
+
+
+<li>Add another feature</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+<p>One day you wake up, look at your home screen, and there’s <strong>your</strong> app—with <strong>your</strong> icon—doing exactly what <em>you</em> want.</p>
+
+
+
+
+<p>That feeling is amazing.</p>
+</div><div class="affiliate-note"><strong>Affiliate disclosure:</strong> This archived article contains referral or affiliate links. If you make a qualifying purchase or sign up through one of these links, Andrew may receive compensation at no additional cost to you.</div></article></main>
+  <footer>Created by <a href="https://andrewgurry.com/">Andrew Gurry</a> · <a href="/articles/">Browse all articles</a></footer>
+</body>
+</html>

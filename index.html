@@ -4,83 +4,70 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Learn Andrew Gurry | Understand Why It Works</title>
-  <meta name="description" content="Practical foundational courses for adults who want to understand how things actually work. Understand first. Memorize second.">
+  <meta name="description" content="Practical foundational lessons for adults who want to understand how things actually work.">
   <link rel="canonical" href="https://learn.andrewgurry.com/">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta property="og:title" content="Learn Andrew Gurry">
-  <meta property="og:description" content="Foundational learning for adults who want the explanation they should have received first.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:title" content="Learn Andrew Gurry | Understand Why It Works">
+  <meta property="og:description" content="Practical foundational lessons for adults who want to understand how things actually work.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://learn.andrewgurry.com/">
-  <style>
-    :root{--navy:#0f172a;--blue:#2563eb;--gold:#f59e0b;--ink:#1f2937;--muted:#64748b;--paper:#fff;--wash:#f8fafc;--line:#e2e8f0}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--wash);line-height:1.6}
-    a{color:var(--blue)}
-    a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
-    .skip{position:absolute;top:-60px;left:12px;background:#fff;color:var(--navy);padding:10px 14px;border-radius:8px;z-index:3}.skip:focus{top:12px}
-    header{background:var(--navy);color:#fff}
-    nav{max-width:1120px;margin:auto;padding:20px;display:flex;justify-content:space-between;align-items:center;gap:20px}
-    .brand{font-size:1.1rem;font-weight:800;color:#fff;text-decoration:none}.brand span{color:#fbbf24}
-    nav .home{color:#cbd5e1;text-decoration:none}
-    .hero{max-width:1120px;margin:auto;padding:80px 20px 96px;display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center}
-    .eyebrow{color:#fbbf24;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem}
-    h1{font-size:clamp(2.7rem,7vw,5.6rem);line-height:.98;letter-spacing:-.055em;margin:16px 0 24px;max-width:850px}
-    .lead{font-size:1.2rem;color:#cbd5e1;max-width:740px}
-    .principle{background:#fff;color:var(--navy);padding:30px;border-radius:24px;box-shadow:0 24px 60px #0006}
-    .principle strong{display:block;font-size:1.45rem;margin-bottom:10px}.principle p{margin:0;color:#475569}
-    main{max-width:1120px;margin:auto;padding:68px 20px}
-    h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;letter-spacing:-.035em;margin:0 0 14px;color:var(--navy)}
-    .intro{font-size:1.1rem;color:var(--muted);max-width:760px;margin:0 0 32px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px}
-    .card h3{margin:0 0 8px;color:var(--navy)}.card p{margin:0;color:var(--muted)}
-    .question{margin-top:64px;background:#eff6ff;border-left:6px solid var(--blue);border-radius:18px;padding:32px}
-    .question h2{font-size:1.8rem}.question ul{margin-bottom:0;padding-left:22px}
-    footer{margin-top:70px;background:var(--navy);color:#cbd5e1;padding:30px 20px;text-align:center}footer a{color:#93c5fd}
-    @media(max-width:760px){.hero,.grid{grid-template-columns:1fr}.hero{padding-top:54px}.principle{box-shadow:none}nav{align-items:flex-start}nav .home{text-align:right}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  </style>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
-  <header>
+  <header class="site-header">
     <nav aria-label="Primary navigation">
       <a class="brand" href="/">Learn <span>Andrew Gurry</span></a>
-      <a class="home" href="https://andrewgurry.com/">AndrewGurry.com</a>
+      <div class="nav-links"><a href="/articles/">Articles</a><a href="https://andrewgurry.com/">AndrewGurry.com</a></div>
     </nav>
-    <div class="hero">
-      <div>
-        <div class="eyebrow">Practical education for curious adults</div>
-        <h1>Learn why it works.</h1>
-        <p class="lead">Foundational lessons for intelligent adults who were never given a clear explanation. No shame. No assumed knowledge. Just useful mental models that make the details easier to remember.</p>
-      </div>
-      <aside class="principle">
-        <strong>Understand first.<br>Memorize second.</strong>
-        <p>Procedures become easier when the underlying system finally makes sense.</p>
-      </aside>
-    </div>
   </header>
+  
+  <section class="hero"><div class="hero-inner">
+    <div><div class="eyebrow">Practical education for curious adults</div><h1>Learn why it works.</h1>
+    <p class="lead">Foundational lessons for intelligent adults who were never given a clear explanation. No shame. No assumed knowledge. Just useful mental models that make the details easier to remember.</p>
+    <a class="button" href="/articles/">Browse all 21 articles</a></div>
+    <aside class="principle"><strong>Understand first.<br>Memorize second.</strong><p>Procedures become easier when the underlying system finally makes sense.</p></aside>
+  </div></section>
   <main id="content">
-    <section>
-      <h2>A growing library of useful foundations</h2>
-      <p class="intro">The first courses are being developed now. They will connect practical explanations, free videos, diagrams, reference sheets, and full courses without requiring a complicated learning platform.</p>
-      <div class="grid">
-        <article class="card"><h3>Electricity and Mechanical Systems</h3><p>Voltage, current, circuits, engines, tools, and the physical systems behind everyday life.</p></article>
-        <article class="card"><h3>Math Money and Economics</h3><p>Fractions, measurement, compound growth, financial literacy, and the reasons the formulas work.</p></article>
-        <article class="card"><h3>Computers and Technology</h3><p>Hardware, networks, operating systems, automation, and the mental models beneath the terminology.</p></article>
+    <section class="section"><h2>A growing library of useful foundations</h2><p class="intro">Practical explanations, projects, and lessons migrated from A-A Events now live here alongside the courses being developed for adults.</p>
+      <div class="subject-grid">
+        <article class="subject-card"><h3>Science and How Things Work</h3><p>Geology, electricity, mechanical systems, measurement, and the physical ideas behind everyday life.</p></article>
+        <article class="subject-card"><h3>Tools, DIY and Technology</h3><p>Wood, welding, multimeters, computers, AI, automation, and useful hands-on skills.</p></article>
+        <article class="subject-card"><h3>Money, Business and Life</h3><p>Foundational finance, business concepts, leadership, habits, and lessons learned through experience.</p></article>
       </div>
     </section>
-    <section class="question">
-      <h2>Start with a real question</h2>
-      <ul>
-        <li>What actually is voltage?</li>
-        <li>Why does dividing by a fraction make the number bigger?</li>
-        <li>How does an engine turn combustion into motion?</li>
-        <li>Why does compound interest grow so quickly?</li>
-      </ul>
-    </section>
+    <section class="section"><h2>Newest articles</h2><p class="intro">The original A-A Events library is now being preserved and organized as part of Learn Andrew Gurry.</p><div class="article-grid"><article class="article-card compact">
+      <a class="card-image" href="/articles/the-three-types-of-rocks-explained-simply-igneous-sedimentary-and-metamorphic/" aria-label="Read The Three Types of Rocks Explained Simply (Igneous, Sedimentary, and Metamorphic)"><img src="/images/articles/the-three-types-of-rocks-explained-simply-igneous-sedimentary-and-metamorphic.webp" alt="" loading="lazy" width="640" height="360"></a>
+      <div class="card-copy"><div class="card-meta">Geology · 2026-06-23</div>
+      <h3><a href="/articles/the-three-types-of-rocks-explained-simply-igneous-sedimentary-and-metamorphic/">The Three Types of Rocks Explained Simply (Igneous, Sedimentary, and Metamorphic)</a></h3>
+      <p>The Three Types of Rocks Explained Simply Rocks may look simple, but they have amazing stories. Some rocks were once melted lava.Some were once sand, mud, or shells.Some were changed…</p></div>
+    </article>
+<article class="article-card compact">
+      <a class="card-image" href="/articles/rocks-vs-minerals-vs-crystals-whats-the-difference/" aria-label="Read Rocks vs. Minerals vs. Crystals: What’s the Difference?"><img src="/images/articles/rocks-vs-minerals-vs-crystals-whats-the-difference.webp" alt="" loading="lazy" width="640" height="360"></a>
+      <div class="card-copy"><div class="card-meta">Geology · 2026-06-04</div>
+      <h3><a href="/articles/rocks-vs-minerals-vs-crystals-whats-the-difference/">Rocks vs. Minerals vs. Crystals: What’s the Difference?</a></h3>
+      <p>Rocks vs. Minerals vs. Crystals: What’s the Difference? When you first start learning geology, three words come up a lot: Rocks.Minerals.Crystals. A lot of people use these words like…</p></div>
+    </article>
+<article class="article-card compact">
+      <a class="card-image" href="/articles/what-is-a-rock-simple-explanation-for-kids-and-adults/" aria-label="Read What Is a Rock? Simple Explanation for Kids and Adults"><img src="/images/articles/what-is-a-rock-simple-explanation-for-kids-and-adults.webp" alt="" loading="lazy" width="640" height="360"></a>
+      <div class="card-copy"><div class="card-meta">Geology · 2026-05-23</div>
+      <h3><a href="/articles/what-is-a-rock-simple-explanation-for-kids-and-adults/">What Is a Rock? Simple Explanation for Kids and Adults</a></h3>
+      <p>What Is a Rock? Have you ever picked up a rock and wondered, “What is this thing?” Maybe it was shiny.Maybe it had stripes.Maybe it was red, black, white, green, or full of little…</p></div>
+    </article>
+<article class="article-card compact">
+      <a class="card-image" href="/articles/learning-geology-rocks-a-very-basic-introduction-to-geology/" aria-label="Read Learning Geology Rocks: A Very Basic Introduction to Geology"><img src="/images/articles/learning-geology-rocks-a-very-basic-introduction-to-geology.webp" alt="" loading="lazy" width="640" height="360"></a>
+      <div class="card-copy"><div class="card-meta">Geology · 2026-04-27</div>
+      <h3><a href="/articles/learning-geology-rocks-a-very-basic-introduction-to-geology/">Learning Geology Rocks: A Very Basic Introduction to Geology</a></h3>
+      <p>Curious About Geology? Geology is the study of Earth. That means geology helps us understand rocks, minerals, mountains, volcanoes, earthquakes, fossils, caves, canyons, and even the…</p></div>
+    </article>
+<article class="article-card compact">
+      <a class="card-image" href="/articles/you-can-build-an-android-app-with-ai/" aria-label="Read You Can Build an Android App With AI"><img src="/images/articles/you-can-build-an-android-app-with-ai.webp" alt="" loading="lazy" width="640" height="360"></a>
+      <div class="card-copy"><div class="card-meta">Technology · 2025-12-28</div>
+      <h3><a href="/articles/you-can-build-an-android-app-with-ai/">You Can Build an Android App With AI</a></h3>
+      <p>How I Built My Own Android App With ChatGPT (And How You Can Too) Have you ever wished you had your own custom app on your phone? Not something from the Play Store…Your own app. Your…</p></div>
+    </article></div><a class="button" href="/articles/">View the complete article library</a></section>
+    <section class="section"><div class="question"><h2>Start with a real question</h2><ul><li>What actually is voltage?</li><li>Why does dividing by a fraction make the number bigger?</li><li>How does an engine turn combustion into motion?</li><li>Why does compound interest grow so quickly?</li></ul></div></section>
   </main>
-  <footer>Created by <a href="https://andrewgurry.com/">Andrew Gurry</a> · Course catalog coming soon</footer>
+  <footer>Created by <a href="https://andrewgurry.com/">Andrew Gurry</a> · <a href="/articles/">Browse all articles</a></footer>
 </body>
 </html>

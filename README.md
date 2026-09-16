@@ -1,3 +1,5 @@
 # Learn Andrew Gurry
 
-Static GitHub Pages site for learn.andrewgurry.com. Includes 22 articles migrated from A-A Events.
+A lightweight, evergreen adult-education hub built around one principle: understand first, memorize second.
+
+Production domain: https://learn.andrewgurry.com
